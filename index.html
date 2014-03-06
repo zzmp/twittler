@@ -20,14 +20,14 @@
 
       $(document).ready(function(){
         var $timeline = $('#timeline').find('.tweetls');
+        var index = 0;
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
+        while(index < streams.home.length){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($timeline);
-          index -= 1;
+          $tweet.prependTo($timeline);
+          index += 1;
         }
 
       });
