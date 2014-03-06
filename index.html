@@ -22,13 +22,16 @@
         var $timeline = $('#timeline').find('.tweetls');
         var index = 0;
 
-        while(index < streams.home.length){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.prependTo($timeline);
-          index += 1;
-        }
+	var updateTimeline = function() {
+          while(index < streams.home.length){
+            var tweet = streams.home[index];
+            var $tweet = $('<div></div>');
+            $tweet.text('@' + tweet.user + ': ' + tweet.message);
+            $tweet.prependTo($timeline);
+            index += 1;
+          }
+        };
+        updateTimeline();
 
       });
 
