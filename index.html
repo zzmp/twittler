@@ -9,6 +9,9 @@
     <div id="menu">
     </div>
     <div id="timeline">
+      <span class="header">
+        <img class="refresh" src="" alt="Refresh">
+      </span>
       <ul class="tweetls">
       </ul>
     </div>
@@ -33,6 +36,7 @@
         };
         updateTimeline();
 
+        $('#timeline').on('click','.refresh',updateTimeline);
       });
 
     </script>
