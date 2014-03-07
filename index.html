@@ -28,8 +28,17 @@
 	var updateTimeline = function() {
           while(index < streams.home.length){
             var tweet = streams.home[index];
-            var $tweet = $('<div></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message);
+            var $tweet = $('<div class="tweet"></div>');
+            var $message = $('<span class="message"></span>');
+            var $user = $('<span class="user"></span>');
+            var $timestamp = $('<span class="timestamp"></span>');
+            
+            $tweet.append($message).append($user).append($timestamp);
+
+            $message.text(tweet.message);
+            $user.text('@' + tweet.user);
+            $timestamp.text(tweet.created_at);
+            
             $tweet.prependTo($timeline);
             index += 1;
           }
