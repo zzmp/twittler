@@ -1,8 +1,14 @@
 #menu {
+  position: relative;
+  width: 10%;
 }
 #timeline {
+  position: relative;
+  width: 45%;
 }
 #subscriptions {
+  position: relative;
+  width: 45%;
 }
 
 .title {
