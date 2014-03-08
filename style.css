@@ -4,6 +4,9 @@ html, body, section {
 section {
   float: left;
 }
+footer {
+  height: 10%;
+}
 
 #menu {
   position: relative;
