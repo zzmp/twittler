@@ -3,6 +3,7 @@ html, body, section {
 }
 section {
   float: left;
+  overflow: auto;
 }
 footer {
   height: 10%;
