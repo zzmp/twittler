@@ -37,6 +37,14 @@ footer {
 #subscriptions {
 }
 
+.refresh {
+  font-size: 0.75em;
+  color: rgba(0,180,0,1);
+}
+.refresh img {
+  height: 0.75em;
+  width: auto;
+}
 .tweet {
   display: none;
   margin: 6px 8px;
