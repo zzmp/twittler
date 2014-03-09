@@ -51,21 +51,24 @@ footer {
   border-top: 1px solid rgba(0,0,250,0.6);
   border-radius: 0 0 40px 10px;
   padding-top: 5px;
+  font-size: 0.8em;
 }
-.user {
+.user, .timestamp {
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
+  overflow: auto;
+}
+.user {
+  display: inline-block;
   border-right: 1px solid rgba(0,0,250,0.6);
   width: 20%;
-  overflow: auto;
   color: rgba(50,50,150,1);
 }
 .timestamp {
   display: inline-block;
-  padding-left: 15px;
-  padding-right: 15px;
   width: calc(80% - 61px);
-  overflow: auto;
   font-style: italic;
+  text-align: right;
+  height: 1em;
 }
