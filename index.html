@@ -37,7 +37,7 @@
         var $timeline = $('#timeline').find('.tweets');
         var index = 0;
 
-	var updateTimeline = function() {
+	var updateTimeline = function(isAnimated) {
           while(index < streams.home.length){
             var tweet = streams.home[index];
             var $tweet = $('<article class="tweet"></article>');
@@ -54,13 +54,15 @@
             $timestamp.text(tweet.created_at);
             
             $tweet.prependTo($timeline);
-            $tweet.slideDown();
+            isAnimated ? $tweet.slideDown() : $tweet.show();
             index += 1;
           }
         };
-        updateTimeline();
+        updateTimeline(false);
 
-        $('#timeline').on('click','.refresh',updateTimeline);
+        $('#timeline').on('click','.refresh',function () {
+          updateTimeline(true);
+        });
       });
 
     </script>
