@@ -9,17 +9,16 @@ footer {
   height: 10%;
 }
 
-#menu {
+#menu, #timeline, #subscriptions {
   position: relative;
+  width: 45%;
+}
+#menu {
   width: 10%;
 }
 #timeline {
-  position: relative;
-  width: 45%;
 }
 #subscriptions {
-  position: relative;
-  width: 45%;
 }
 
 .title {
