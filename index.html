@@ -42,10 +42,12 @@
             var tweet = streams.home[index];
             var $tweet = $('<article class="tweet"></article>');
             var $message = $('<div class="message"></div>');
+            var $meta = $('<div class="meta"></div>');
             var $user = $('<div class="user"></div>');
             var $timestamp = $('<div class="timestamp"></div>');
             
-            $tweet.append($message).append($user).append($timestamp);
+            $meta.append($user).append($timestamp);
+            $tweet.append($message).append($meta);
 
             $message.text(tweet.message);
             $user.text('@' + tweet.user);
