@@ -75,7 +75,7 @@
         var marqueeTimeline = function() {
           while(marqueeIndex < streams.home.length){
             var tweet = streams.home[marqueeIndex];
-            var telegram = tweet.message + ' FROM ' + tweet.user + " | ";
+            var telegram = tweet.message + ' @' + tweet.user + " | ";
 
             $('#ticker').find('marquee').append(telegram);
             marqueeIndex += 1;
