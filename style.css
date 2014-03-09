@@ -16,6 +16,8 @@ ul {
 header {
   height: 36px;
   text-align: center;
+  font-size: 2em;
+  color: rgba(0,0,256,1);
 }
 footer {
   position: absolute;
