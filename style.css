@@ -5,6 +5,9 @@ section {
   float: left;
   overflow: auto;
 }
+header {
+  text-align: center;
+}
 footer {
   height: 10%;
 }
