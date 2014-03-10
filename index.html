@@ -42,13 +42,31 @@
 
         var selectUser = function(user) {
           return function() {
+            if (user === 'all') {
+              showUsers();
+            } else {
+              hideUsers();
+              showUser(user);
+            }
           };
+        };
+        var showUser = function(user) {
+            $('.tweet').filter(function(index) {
+              return $(this).attr('user') === user;
+            }).show();
+        };
+        var showUsers = function() {
+            $('.tweet').show();
+        };
+        var hideUsers = function() {
+            $('.tweet').hide();
         };
 
         $('li.user').on('click', selectUser('all'));
 
         for (var user = 0; user < users.length; user +=1) {
           var $user = $('<li class="user"></li>');
+          $user.attr('user',users[user]);
           $user.text('@' + users[user]);
           $user.on('click', selectUser(users[user]));
 
