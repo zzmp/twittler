@@ -26,6 +26,7 @@
         some <em>users</em>
       </header>
       <ul class="users">
+        <li class="user selected">all users</li>
       </ul>
     </section>
     <footer>
@@ -40,11 +41,11 @@
         var marqueeIndex = 0;
 
         for (var user = 0; user < users.length; user +=1) {
-          var $user = $('<article class="user"></article>');
+          var $user = $('<li class="user"></li>');
           $user.attr('user', users[user]);
           $user.text('@' + users[user]);
 
-          $user.prependTo($subscriptions);
+          $user.appendTo($subscriptions);
         }
 
 	var updateTimeline = function(isAnimated) {
