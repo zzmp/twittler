@@ -44,15 +44,11 @@ footer {
   background: rgba(80,80,40,1);
   color: rgba(250,250,170,1);
 }
-#menu, #timeline, #subscriptions {
+#timeline, #subscriptions {
   position: relative;
-  width: 45%;
-}
-#menu {
-  display: none;
-  width: 10%;
 }
 #timeline {
+  width: 70%;
 }
 #subscriptions {
 }
