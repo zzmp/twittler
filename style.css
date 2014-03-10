@@ -28,9 +28,12 @@ footer {
 
 #ticker {
   position: relative;
-  padding: 8px 0;
+  border-top: 8px solid rgba(255,255,255,1);
+  border-bottom: 8px solid rgba(255,255,255,1);
   left: -8px;
   width: calc(100% + 16px);
+  background: rgba(80,80,40,1);
+  color: rgba(255,255,255,1);
 }
 #menu, #timeline, #subscriptions {
   position: relative;
