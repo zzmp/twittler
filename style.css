@@ -49,6 +49,7 @@ footer {
   width: 45%;
 }
 #menu {
+  display: none;
   width: 10%;
 }
 #timeline {
