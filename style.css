@@ -3,9 +3,10 @@ html, body, section {
 }
 body {
   margin-bottom: 0;
-  height: calc(100% - 8px);
+  height: calc(100% + 36px);
 }
 section {
+  height: calc(100% - 36px);
   float: left;
 }
 ul {
@@ -21,7 +22,7 @@ header {
 }
 footer {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 44px);
   height: 10%;
 }
 
