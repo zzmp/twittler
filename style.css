@@ -1,12 +1,12 @@
-html, body, section {
+html {
   height: 100%;
 }
 body {
-  margin-bottom: 0;
-  height: calc(100% + 36px);
+  margin: 0 8px;
+  height: calc(100% + 36px + 16px);
 }
 section {
-  height: calc(100% - 36px);
+  height: calc(100% - 36px - 16px);
   float: left;
 }
 ul {
@@ -22,10 +22,16 @@ header {
 }
 footer {
   position: absolute;
-  top: calc(100% + 44px);
+  top: calc(100% + 36px + 16px);
   height: 10%;
 }
 
+#ticker {
+  position: relative;
+  padding: 8px 0;
+  left: -8px;
+  width: calc(100% + 16px);
+}
 #menu, #timeline, #subscriptions {
   position: relative;
   width: 45%;
