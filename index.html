@@ -45,17 +45,28 @@
             if (user === 'all') {
               showUsers();
             } else {
+              $('li.user').first().removeClass('selected');
               hideUsers();
-              showUser(user);
+              $('li.user').filter(function(index) {
+                return $(this).attr('user') === user;
+              }).toggleClass('selected');
+              showSelected();
             }
           };
         };
-        var showUser = function(user) {
-            $('.tweet').filter(function(index) {
-              return $(this).attr('user') === user;
-            }).show();
+        var showSelected = function() {
+          $('li.user').each(function() {
+            if ($(this).hasClass('selected')) {
+              var user = $(this).attr('user');
+              $('.tweet').filter(function(index) {
+                return $(this).attr('user') === user;
+              }).show();
+            }
+          });
         };
         var showUsers = function() {
+            $('li.user').removeClass('selected');
+            $('li.user').first().addClass('selected');
             $('.tweet').show();
         };
         var hideUsers = function() {
