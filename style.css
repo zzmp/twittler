@@ -51,6 +51,7 @@ footer {
   width: 70%;
 }
 #subscriptions {
+  width: 30%;
 }
 
 .refresh {
@@ -80,7 +81,10 @@ footer {
   padding-top: 5px;
   font-size: 0.8em;
 }
-div .user, .timestamp {
+.user {
+  color: rgba(50,50,150,1);
+}
+div.user, .timestamp {
   display: inline-block;
   padding-left: 15px;
   padding-right: 15px;
@@ -90,11 +94,19 @@ div .user {
   display: inline-block;
   border-right: 1px solid rgba(0,0,250,0.6);
   width: 20%;
-  color: rgba(50,50,150,1);
 }
 .timestamp {
   display: inline-block;
   width: calc(80% - 61px);
   font-style: italic;
   text-align: right;
+}
+ul.users {
+  padding-top: 3px;
+}
+article.user {
+  margin: 3px 8px;
+  background: rgba(200,160,200,1);
+  border: 1px solid rgba(0,0,250,1);
+  border-radius: 40px 10px 10px 40px;
 }
