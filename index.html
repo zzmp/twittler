@@ -30,7 +30,6 @@
       <header>
         some <em>users</em>
       </header>
-      Subscriptions Placeholder
       <ul class="users">
       </ul>
     </section>
@@ -41,8 +40,17 @@
 
       $(document).ready(function(){
         var $timeline = $('#timeline').find('.tweets');
+        var $subscriptions = $('#subscriptions').find('.users');
         var index = 0;
         var marqueeIndex = 0;
+
+        for (var user = 0; user < users.length; user +=1) {
+          var $user = $('<article class="user"></article>');
+          $user.attr('user', users[user]);
+          $user.text('@' + users[user]);
+
+          $user.prependTo($subscriptions);
+        }
 
 	var updateTimeline = function(isAnimated) {
           while(index < streams.home.length){
