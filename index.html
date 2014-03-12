@@ -92,7 +92,7 @@
             var $message = $('<div class="message"></div>');
             var $meta = $('<div class="meta"></div>');
             var $user = $('<div class="user"></div>');
-            var $timestamp = $('<div class="timestamp"></div>');
+            var $timestamp = $('<time class="timestamp"></time>');
             
             $meta.append($user).append($timestamp);
             $tweet.append($message).append($meta);
@@ -100,7 +100,8 @@
             $message.text(tweet.message);
             $user.text('@' + tweet.user);
             $tweet.attr('user',tweet.user);
-            $timestamp.text(tweet.created_at);
+            $timestamp.attr('datetime',(new Date(tweet.created_at)).toISOString());
+            $timestamp.timeago();
             
             $user.on('click', selectUser(tweet.user));
 
