@@ -56,6 +56,28 @@ footer {
 #subscriptions {
   height: 40%;
 }
+#composer {
+  padding-left: 40px;
+  height: 60%;
+}
+#composer input, button {
+  height: 2em;
+  width: calc(100% - 26px);
+  padding: 0;
+}
+#composer input {
+  padding-left: 8px;
+  height: 2em;
+  margin: 3px 8px 0 8px;
+  background: rgba(200,160,200,.5);
+  border-radius: 40px 10px 10px 10px;
+}
+#composer button {
+  width: calc(100% - 16px);
+  margin: 0 8px 3px 8px;
+  background: rgba(200,160,200,1);
+  border-radius: 10px 10px 10px 40px; 
+}
 
 .refresh {
   font-size: 0.75em;
