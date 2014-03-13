@@ -141,6 +141,21 @@
         };
         updateMarquee();
 
+        var speak = function(event) {
+          if (event.which !== 1 && event.which !== 13) { return; }
+          if (!window.visitor) {
+            window.visitor = prompt('"Who are you?" said the Caterpillar.', 'Alice');
+            streams.users[window.visitor] = [];
+          }
+
+          var $tweet = $('input#speak');
+          writeTweet($tweet.val());
+          $tweet.val('');
+          updateTimeline(true);
+        };
+        $('input#speak').on('keydown', speak);
+        $('button#speak').on('click', speak);
+
       });
 
       $(window).load(function() {
