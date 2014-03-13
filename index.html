@@ -82,16 +82,20 @@
         var hideUsers = function() {
             $('.tweet').hide();
         };
+        var appendUser = function(user) {
+          var $user = $('<li class="user"></li>');
+          $user.attr('user',user);
+          $user.text('@' + user);
+          $user.on('click', selectUser(user));
+
+          $user.appendTo($subscriptions);
+        };
+
 
         $('li.user').on('click', selectUser('all'));
 
         for (var user = 0; user < users.length; user +=1) {
-          var $user = $('<li class="user"></li>');
-          $user.attr('user',users[user]);
-          $user.text('@' + users[user]);
-          $user.on('click', selectUser(users[user]));
-
-          $user.appendTo($subscriptions);
+          appendUser(users[user]);
         }
 
 	var updateTimeline = function(isAnimated) {
@@ -146,6 +150,7 @@
           if (!window.visitor) {
             window.visitor = prompt('"Who are you?" said the Caterpillar.', 'Alice');
             streams.users[window.visitor] = [];
+            appendUser(window.visitor);
           }
 
           var $tweet = $('input#speak');
