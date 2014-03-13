@@ -6,9 +6,12 @@ body {
   height: calc(100% + 36px + 16px);
   background: rgba(250,250,170,1);
 }
-section {
+section#timeline, aside {
   height: calc(100% - 36px - 16px);
   float: left;
+}
+aside {
+  width: 30%;
 }
 ul {
   height: calc(100% - 36px);
@@ -49,9 +52,6 @@ footer {
 }
 #timeline {
   width: 70%;
-}
-#subscriptions {
-  width: 30%;
 }
 
 .refresh {
